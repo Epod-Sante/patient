@@ -7,7 +7,6 @@ import ca.uqtr.patient.entity.Appointment;
 import ca.uqtr.patient.entity.Patient;
 import ca.uqtr.patient.repository.AppointmentRepository;
 import ca.uqtr.patient.repository.patient.PatientRepository;
-import javassist.bytecode.stackmap.TypeData;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.context.MessageSource;
@@ -23,7 +22,7 @@ import java.util.logging.Logger;
 
 @Service
 public class AppointmentServiceImpl implements AppointmentService{
-    private static final Logger LOGGER = Logger.getLogger( TypeData.ClassName.class.getName() );
+    private static final Logger LOGGER = Logger.getLogger( AppointmentServiceImpl.class.getName() );
 
     private AppointmentRepository appointmentRepository;
     private MessageSource messageSource;

@@ -10,7 +10,6 @@ import ca.uqtr.patient.entity.Recommendation;
 import ca.uqtr.patient.repository.patient.PatientRepository;
 import ca.uqtr.patient.repository.professional.ProfessionalRepository;
 import ca.uqtr.patient.repository.recommendation.RecommendationRepository;
-import javassist.bytecode.stackmap.TypeData;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.context.MessageSource;
@@ -24,7 +23,7 @@ import java.util.logging.Logger;
 
 @Service
 public class RecommendationServiceImpl implements RecommendationService {
-    private static final Logger LOGGER = Logger.getLogger( TypeData.ClassName.class.getName() );
+    private static final Logger LOGGER = Logger.getLogger( RecommendationServiceImpl.class.getName() );
 
     private PatientRepository patientRepository;
     private RecommendationRepository recommendationRepository;

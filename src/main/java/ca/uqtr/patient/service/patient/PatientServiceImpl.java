@@ -14,7 +14,6 @@ import ca.uqtr.patient.repository.patient.PatientRepository;
 import ca.uqtr.patient.repository.view.Birthday_genderRepository;
 import ca.uqtr.patient.repository.view.Height_weightRepository;
 import ca.uqtr.patient.service.questionnaire.QuestionnaireService;
-import javassist.bytecode.stackmap.TypeData;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -32,7 +31,7 @@ import java.util.logging.Logger;
 
 @Service
 public class PatientServiceImpl implements PatientService {
-    private static final Logger LOGGER = Logger.getLogger( TypeData.ClassName.class.getName() );
+    private static final Logger LOGGER = Logger.getLogger( PatientServiceImpl.class.getName() );
 
     private PatientRepository patientRepository;
     private MedicalFileRepository medicalFileRepository;

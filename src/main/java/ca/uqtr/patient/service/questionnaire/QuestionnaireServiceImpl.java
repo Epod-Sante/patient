@@ -7,7 +7,6 @@ import ca.uqtr.patient.entity.Questionnaire;
 import ca.uqtr.patient.event.questionnaire.OnQuestionnaireSendEvent;
 import ca.uqtr.patient.repository.patient.PatientRepository;
 import ca.uqtr.patient.repository.questionnaire.QuestionnaireRepository;
-import javassist.bytecode.stackmap.TypeData;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.context.ApplicationEventPublisher;
@@ -24,7 +23,7 @@ import java.util.logging.Logger;
 
 @Service
 public class QuestionnaireServiceImpl implements QuestionnaireService {
-    private static final Logger LOGGER = Logger.getLogger( TypeData.ClassName.class.getName() );
+    private static final Logger LOGGER = Logger.getLogger( QuestionnaireServiceImpl.class.getName() );
 
     private final QuestionnaireRepository questionnaireRepository;
     private final PatientRepository patientRepository;
